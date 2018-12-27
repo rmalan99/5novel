@@ -1,0 +1,25 @@
+ <link href="./Documentation/css/alan.css" rel="stylesheet">
+ <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+ <script src="js/longaniza.js"></script>
+
+                     <!--satelite login--->
+                    <div class="co_v1">
+                            <img class="icon_mach" src="./Documentation/image/02.jpg"  onclick="login_effet(0)"/>
+                            <div class="banner_1" id="hollow">
+                                <img class="icon_mach"  onclick="login_effet(1)" src="./Documentation/image/01.jpg"/>
+                                <p href="#" class="bob" id="id">-</p>
+                                <p href="#" class="bob" id="name">-</p>
+                                <p href="#" class="bob" id="balance">-</p>
+                                <a class="bob" onclick="sing_d()" id="option">salir</a>
+                            </div>
+                        </div>
+                        <!--fin satelite login--->
+                    <div class="c_1" id="c_1_1">
+                        <div onclick="noti('off')" style="position:absolute;right:1.5%;color:white;z-index:4;top:0%;">X</div>
+                            <div class="c_2">
+                                <p id="m_1" style="color:white;margin:10px;"></p>
+                                <p id="m_2.1"></p>
+                                <a id="m_2" style="color:white;margin:10px;"></a>
+                                <p id="m_3" style="color:white;margin:10px;"></p>
+                            </div>
+                    </div>

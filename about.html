@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Cocoon -Portfolio">
+    <meta name="keywords" content="Cocoon , Portfolio">
+    <meta name="author" content="Pharaohlab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>info</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="./Documentation/css/alan.css" rel="stylesheet">
+ <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+ <script src="js/longaniza.js"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="#">
+                    <img src="./ilia.png" alt="cocoon">
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section">
+                <ul class="menu_nav">
+                    <li >
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                            <a href="login.html">
+                                    login
+                                </a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!--main menu end -->
+
+        </div>
+        <!--=================== side menu end====================-->
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+                                <!--satelite login--->
+                                <div class="co_v1">
+                                        <img class="icon_mach" src="./Documentation/image/02.jpg"  onclick="login_effet(0)"/>
+                                        <div class="banner_1" id="hollow">
+                                            <img class="icon_mach"  onclick="login_effet(1)" src="./Documentation/image/01.jpg"/>
+                                            <p href="#" class="bob" id="id">-</p>
+                                            <p href="#" class="bob" id="name">-</p>
+                                            <p href="#" class="bob" id="balance">-</p>
+                                            <a class="bob" onclick="sing_d()" id="option">salir</a>
+                                        </div>
+                                    </div>
+                                    <!--fin satelite login--->
+                                <div class="c_1" id="c_1_1">
+                                    <div onclick="noti('off')" style="position:absolute;right:1.5%;color:white;z-index:4;top:0%;">X</div>
+                                        <div class="c_2">
+                                            <p id="m_1" style="color:white;margin:10px;"></p>
+                                            <p id="m_2.1"></p>
+                                            <a id="m_2" style="color:white;margin:10px;"></a>
+                                            <p id="m_3" style="color:white;margin:10px;"></p>
+                                        </div>
+                                </div>
+                <div class="co_v1">
+                        <img class="icon_mach" src="./Documentation/image/índice.png"  onclick="login_effet(0)"/>
+                        <div class="banner_1" id="hollow">
+                            <img class="icon_mach"  onclick="login_effet(1)" src="./Documentation/image/índice.png"/>
+                            <p href="#" class="bob" id="id">-</p>
+                            <p href="#" class="bob" id="name">-</p>
+                            <p href="#" class="bob" id="balance">-</p>
+                            <a class="bob" onclick="sing_d()" id="option">salir</a>
+                        </div>
+                    </div>
+                    <!--fin satelite login--->
+                <div class="c_1" id="c_1_1">
+                    <div onclick="noti('off')" style="position:absolute;right:1.5%;color:white;z-index:4;top:0%;">X</div>
+                        <div class="c_2">
+                            <p id="m_1" style="color:white;margin:10px;"></p>
+                            <p id="m_2.1"></p>
+                            <a id="m_2" style="color:white;margin:10px;"></a>
+                            <p id="m_3" style="color:white;margin:10px;"></p>
+                        </div>
+                </div>
+            <div>
+                <div class="img_card">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-7 content_section">
+                            <div class="content_box">
+                                <div class="content_box_inner">
+                                    <div>
+                                        <h3>
+                                            5 Novel
+                                        </h3>
+                                        <p>
+                                            5novel 
+                                            La mejor pagina para descargar tus novelas al mejor precio y las mejores versiones disponible,
+                                            con un cataloga exquisito y de los mejores titulos disponibles.
+
+                                        </p>
+                                        <!--=================== counter start====================-->
+                                        <div class="pt50">
+                                            <div class="row justify-content-center">
+                                                <div class="col-12 col-md-4">
+                                                    <div class="counter_box">
+                                                        <div class="divider"></div>
+                                                        <span class="counter">200</span>
+                                                        <h5>novelas disponible</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <div class="counter_box">
+                                                        <div class="divider"></div>
+                                                        <span class="counter">1000000</span>
+                                                        <h5>descargas</h5>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                        <!--=================== counter end====================-->
+                                    </div>
+                                    <!--===================testimonial start====================-->
+                                    <div class="testimonial_carousel mt50">
+
+                                        <div class="testimonial_box">
+                                            
+                                            <div class="testimonial_author">
+                                                <img src="./Documentation/image/swa.jpg" alt="author">
+                                                <h5>ADRIAN MENDEZ(SWA)</h5>
+                                                <p>Desarrollador Wed<br>
+                                                Matricula:17-EISN-2-021
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="testimonial_box">
+                                            
+                                            <div class="testimonial_author">
+                                                <img src="./Documentation/image/aan.jpg" alt="author">
+                                                <h5>Alan Andres hidalgo</h5>
+                                                <p>programador<br>
+                                                    matricula :17-EISN-2-027    
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="testimonial_box">
+                                            
+                                            <div class="testimonial_author">
+                                                <img src="./Documentation/image/jo.jpg" alt="author">
+                                                <h5>Joalvin Ignacio Abreu Matos</h5>
+                                                <p>Desarrollador Wed<br>
+                                                    actor porno<br>
+                                                    matricula:17-EISN-2-036
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--===================testimonial end====================-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-5 img_section" style="background-image: url('./Documentation/image/dessiner/card.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=================== content body end ====================-->
+    </div>
+</div>
+
+<!-- jquery -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<!--slick carousel -->
+<script src="assets/js/slick.min.js"></script>
+<!--Portfolio Filter-->
+<script src="assets/js/imgloaded.js"></script>
+<script src="assets/js/isotope.js"></script>
+<!-- Magnific-popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!--Counter-->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- WOW JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- Custom js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

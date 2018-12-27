@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Cocoon -Portfolio">
+    <meta name="keywords" content="Cocoon , Portfolio">
+    <meta name="author" content="Pharaohlab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>registro</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->	
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->	
+        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="./Documentation/css/alan.css" rel="stylesheet">
+</head>
+<body>
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+
+    <!--=================== menu Button show in small screens ====================-->
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <!--=================== menu Button end====================-->
+
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="#">
+                    <img src="./ilia.png" alt="cocoon">
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section">
+                <ul class="menu_nav">
+                    <li >
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            login
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!--main menu end -->
+        </div>
+        <!--=================== side menu end====================-->
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-10 col-md-9 col-12 body_block align-content-center">
+                <div class="container-login100">
+                        <div class="wrap-login100 p-t-50 p-b-90">
+                    <!--satelite login--->
+                    <div class="co_v1">
+                            <img class="icon_mach" src="./Documentation/image/índice.png"  onclick="login_effet(0)"/>
+                            <div class="banner_1" id="hollow">
+                                <img class="icon_mach"  onclick="login_effet(1)" src="./Documentation/image/índice.png"/>
+                                <p href="#" class="bob" id="id">-</p>
+                                <p href="#" class="bob" id="name">-</p>
+                                <p href="#" class="bob" id="balance">-</p>
+                                <a class="bob" onclick="sing_d()" id="option">salir</a>
+                            </div>
+                        </div>
+                        <!--fin satelite login--->
+                    <div class="c_1" id="c_1_1">
+                        <div onclick="noti('off')" style="position:absolute;right:1.5%;color:white;z-index:4;top:0%;">X</div>
+                            <div class="c_2">
+                                <p id="m_1" style="color:white;margin:10px;"></p>
+                                <p id="m_2.1"></p>
+                                <a id="m_2" style="color:white;margin:10px;"></a>
+                                <p id="m_3" style="color:white;margin:10px;"></p>
+                            </div>
+                    </div>
+                            
+                                <span class="login100-form-title p-b-51" style="color:#c33fff;">
+                                    registro
+                                </span>
+                                
+                                <div class="wrap-input100 validate-input m-b-16" data-validate = "name is required">
+                                    <input class="input100" type="text" id="name_r" placeholder="name"  style="color: #c33fff;">
+                                    <span class="focus-input100"  style="border-color:#c33fff;"></span>
+                                </div>
+                                <div class="wrap-input100 validate-input m-b-16" data-validate = "last name is required">
+                                    <input class="input100" type="text" id="lastname_r" placeholder="lastname"  style="color: #c33fff;">
+                                    <span class="focus-input100"  style="border-color:#c33fff;"></span>
+                                </div>
+                                <div class="wrap-input100 validate-input m-b-16" data-validate = "user is required">
+                                    <input class="input100" type="text" id="id_user" placeholder="@IDuser"  style="color: #c33fff;">
+                                    <span class="focus-input100"  style="border-color:#c33fff;"></span>
+                                </div>
+                                        
+                                <div class="wrap-input100 validate-input m-b-16" data-validate = "password is required">
+                                    <input class="input100" type="password" id="pass" placeholder="Password"  style="color: #c33fff;">
+                                    <span class="focus-input100"  style="border-color:#c33fff;"></span>
+                                </div>
+                                <div class="container-login100-form-btn m-t-17" onclick="reg()">
+                                    <button class="login100-form-btn"  style="background: #aa36d8;">
+                                        registrar
+                                    </button>
+                                </div>
+                                <div style="font-size: 70%; float:right; margin-top:10px; color:#c33fff;">
+                                     <a href="./login.html">iniciar sesion</a>
+                                </div>
+                        </div>
+                    </div>
+        </div>
+        <!--=================== content body end ====================-->
+    </div>
+</div>
+
+
+<script src="js/longaniza.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<!-- jquery -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<!--slick carousel -->
+<script src="assets/js/slick.min.js"></script>
+<!--Portfolio Filter-->
+<script src="assets/js/imgloaded.js"></script>
+<script src="assets/js/isotope.js"></script>
+<!-- Magnific-popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!--Counter-->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- WOW JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- Custom js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

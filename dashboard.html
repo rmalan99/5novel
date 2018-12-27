@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Cocoon -Portfolio">
+    <meta name="keywords" content="Cocoon , Portfolio">
+    <meta name="author" content="Pharaohlab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>Dashboard</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="./Documentation/css/alan.css" rel="stylesheet">
+</head>
+<body  onload="banco() ">
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+
+    <!--=================== menu Button show in small screens ====================-->
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <!--=================== menu Button end====================-->
+
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="#">
+                    <img src="./ilia.png" alt="cocoon">
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section">
+                <ul class="menu_nav">
+                    <li >
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            login
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!--main menu end -->
+        </div>
+        <!--=================== side menu end====================-->
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-10 col-md-6  body_block  align-content-center" style="background:whitesmoke;">
+            <div class="container" >
+                <div class="row">
+                    <!--satelite login--->
+                    <div class="co_v1">
+                        <img class="icon_mach" src="./Documentation/image/índice.png"  onclick="login_effet(0)"/>
+                        <div class="banner_1" id="hollow">
+                            <img class="icon_mach"  onclick="login_effet(1)" src="./Documentation/image/índice.png"/>
+                            <p href="#" class="bob" id="id">-</p>
+                            <p href="#" class="bob" id="name">-</p>
+                            <p href="#" class="bob" id="balance">-</p>
+                            <a class="bob" onclick="sing_d()" id="option">salir</a>
+                        </div>
+                    </div>
+                    <!--fin satelite login--->
+                    <!--banner message--->
+                    <div class="c_1" id="c_1_1">
+                        <div onclick="noti('off');banco()" style="position:absolute;right:1.5%;color:white;z-index:4;top:0%;">X</div>
+                        <div class="c_2">
+                            <p id="m_1"  style="color:white;margin:10px;"></p>
+                            <p id="m_2"style="color:white;margin:10px;"></p>
+                            <a id="m_2.1"  style="color:white;position:absolute; top:35%;"><img onclick="noti('off')" src="./baseline-arrow_downward-24px.svg" style="height: 30px;background-color: violet;border-radius: 50%;"></a>
+                            <p id="m_3"  style="color:white;margin:10px;"></p>
+                        </div>
+                    </div>
+                    <!--banner mensage--->
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w" src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fhaito.jpg?alt=media&token=5b980390-0ff0-43e8-9631-c0ab143d537e"/>
+                            <div class="info">
+                                <h4>Haito Gensuo no Gringar</h4>
+                                <p style="color:white;">Cuando Haruhiro despierta, está en la oscuridad. Él no sabe donde está, por que está allí o de donde venía. A su alrededor hay más gente en las mismas circunstancias. Haruhiro y sus compañeros se encuentran en un mundo llamado Grimgar, allí ellos deberán formar un equipo, cooperar, y aprender nuevas habilidades para sobrevivir juntos en este hostil nuevo mundo.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(0,'haito v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(0,'haito v2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(0,'haito v3.pdf')">tomo 3</p>
+                                <p class="tag" onclick="con(0,'haito v4.pdf')">tomo 4</p>
+                                <span id="price">450</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                            <div class="row">
+                                <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fabsoluted1.jpg?alt=media&token=8c9ac6f6-4bb6-4938-8698-b69ef0f9fee1"/>
+                                <div class="info">
+                                    <h4>absolute duo</h4>
+                                    <p style="color:white;">Después de perder a un ser querido, Tooru Konoe se inscribe en la Academia Kouryou con el fin de obtener un <Blaze>, un arma que es la manifestación de su alma, para vengarse en su honor. El esperaba un “arma”, pero… lo que obtuvo fue un “escudo”… ¿¡Cómo ha de conseguir su venganza con algo que ni siquiera es un arma!?</p>
+                                </div>
+                                <div class="desc">
+                                    <h4>descarga</h4>
+                                    <p class="tag" onclick="con(1,'absolute duo v1.pdf')">tomo 1</p>
+                                    <p class="tag" onclick="con(1,'absolute duo v2.pdf')">tomo 2</p>
+                                    <p class="tag" onclick="con(1,'absolute duo v4.pdf')">tomo 4</p>
+                                    <span id="price">150</span>
+                                    <p class="idiot">X tomo</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fabsolutesoli.jpg?alt=media&token=0a67fa20-617d-46cb-a367-196c87fa8bb5"/>
+                            <div class="info">
+                                <h4>Absolute Solitude</h4>
+                                <p style="color:white;">En agosto de 2019, los científicos reciben unas extrañas señales extraterrestres informándoles de una serie de catástrofes que azotarán el planeta. Después de eso, varias formas de vida extraterrestre entran en contacto con la raza humana, provocando que dichas personas se vean afectadas por el Tercer Ojo y desarrollen una serie de poderes. Algunos tienen la capacidad de moverse a la velocidad del sonido, otros puedes romper lo que sea con los dientes o poseer un arma capaz de cortar el acero. La historia sigue a Utsugi Minoru, un chico de diecisiete años que tiene la habilidad que siempre ha deseado: Solitude (nombre en clase: lsolator); y a Yumiko, miembro de una organización que observa a estos nuevos superhumanos. Sin embargo, las proezas dadas por Absolute Solitude dan lugar a una infinidad de batallas, donde Minoru será el protagonista.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(2,'Absolute Solitude 01.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(2,'Absolute Solitude 02.pdf')">tomo 2</p>
+                                <span id="price">220</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2FArifureta.jpg?alt=media&token=438c515c-9966-49e8-9096-59ed36417e00"/>
+                            <div class="info">
+                                <h4>Arifureta</h4>
+                                <p style="color:white;">Entre la clase transportada a otro mundo, Nagumo Hajime es un ordinario estudiante varón que no tenía ambiciones ni aspiraciones en la vida, y por lo tanto es llamado “incompetente” por sus compañeros de clase.
+                                    La clase fue invocada para convertirse en héroes y salvar a un país de la destrucción. Los estudiantes de la clase fueron bendecidos con poderosas características y oficios geniales, sin embargo, no fue el caso de Hajime, con su profesión de “Sinergista”, y sus muy mediocres estados.
+                                    “Sinergistas”, para decirlo en otras palabras era sólo un oficio de artesanía. Siendo el más débil, cayó a las profundidades del abismo cuando él y sus compañeros estaban explorando una mazmorra. ¿Qué encontró en las profundidades del abismo? ¿Podrá sobrevivir?
+                                    </p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(3,'Arifureta v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(3,'Arifureta v2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(3,'Arifureta v3.pdf')">tomo 3</p>
+                                <p class="tag" onclick="con(3,'Arifureta v4.pdf')">tomo 4</p>
+                                <span id="price">170</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fblack%20bullet.jpg?alt=media&token=0f9f1764-47d9-479d-a829-69cf870c6f8a"/>
+                            <div class="info">
+                                <h4>Black Bullet</h4>
+                                <p style="color:white;">En un futuro cercano, donde la humanidad a sido derrotada por unos parásitos llamados gastrea. Han sido exiliados en pequeños territorios viviendo con desesperación y con miedo. Compañías llamadas “seguridad social” cuentas con miembros capaces de pelear contra los gastrea en equipos de 2 personas, un iniciador, que tiene el poder de los parásitos dentro de el y un promotor que es el que guía y da soporte a los iniciadores.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(4,'black bullet v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(4,'black bullet v6.pdf')">tomo 6</p>
+                                <p class="tag" onclick="con(4,'black bullet v7.pdf')">tomo 7</p>
+                                <span id="price">220</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fbungaku-shoujo.jpg?alt=media&token=f8dd832e-a4b5-45e9-8b3e-ae7e0b8f084f"/>
+                            <div class="info">
+                                <h4>bungaku shoujo</h4>
+                                <p style="color:white;">La historia de Bungaku Shoujo, cuenta la vida de la líder del club de literatura Toko Amano que se hace llamar “La chica literaria”. En realidad Toko es un ser sobrenatural que devora las historia y que tiene a su cargo a un chico de segundo año llamado Konoha Inoue. Este escribe todos los días relatos para que Toko se los coma. Inoue termina publicando una novela de gran éxito, pero lo mantiene en secreto. Esta novela provocará un auténtico cataclisma en su vida.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(5,'bungaku shoujo.pdf')">tomo 1</p>
+                                <span id="price">500</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fero-manga.jpg?alt=media&token=2a819c17-9ed7-4997-be0b-4c695b26b809"/>
+                            <div class="info">
+                                <h4>Ero-manga seisei</h4>
+                                <p style="color:white;">La historia sigue a Masamune Izumi, un autor de novelas ligeras que cursa preparatoria. La hermana menor de Masamune es Sagiri, una chica retraida que no ha dejado su habitación por todo un año entero. Ella incluso fuerza a su hermano a hacer y llevarle su comida cuando ella golpea el piso. Masamune quiere que su hermana salga de su cuarto, debido a que ellos dos son para el otro su única familia. El ilustrador de la novela de Masamune, cuyo nombre de dibujante es “Ero Manga Sensei”, realiza dibujos extremadamente pervertidos, y es muy confiable. Masamune nunca ha visto a su ilustrador e imagina que él es solo un repugnante y pervertido otaku. Sin embargo, la verdad es revelada… y “Ero Manga Sensei” es su propia hermana menor! Para agregarse al caos que estalla entre los hermanos, una hermosa, femenina y exitosa autora de manga shoujo se convierte en su rival!</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(6,'ero-manga v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(6,'ero-manga v2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(6,'ero-manga v3.pdf')">tomo 3</p>
+                                <p class="tag" onclick="con(6,'ero-manga v4.pdf')">tomo 4</p>
+                                <p class="tag" onclick="con(6,'ero-manga v5.pdf')">tomo 5</p>
+                                <p class="tag" onclick="con(6,'ero-manga v6.pdf')">tomo 6</p>
+                                <span id="price">300</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2FGoblin%20Slayer.jpg?alt=media&token=7df209eb-a2e7-4d07-b01f-0c1737e523c2"/>
+                            <div class="info">
+                                <h4>Goblin Slayerf</h4>
+                                <p style="color:white;"> En un mundo de fantasía, los aventureros se unen por todo el mundo para unirse al Gremio, a fin de completar contratos para cualquier trabajo disponible. Una sacerdotisa inexperta se une a su primer grupo de aventuras, pero entra en peligro después de que su primer contrato de aventurero con goblins fracasa.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(7,'Goblin Slayer V1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(7,'Goblin Slayer V2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(7,'Goblin Slayer V3.pdf')">tomo 3</p>
+                                <p class="tag" onclick="con(7,'Goblin Slayer V4.pdf')">tomo 4</p>
+                                
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fkonosuba.jpg?alt=media&token=c16945c7-9270-4638-91a7-eee361fe87f4"/>
+                            <div class="info">
+                                <h4>konosuba</h4>
+                                <p style="color:white;">La vida de Kazuma Satou, un hikikomori al cual le gusta los videojuegos, termina de forma abrupta debido a un accidente de tráfico, o eso se suponía, pero cuando despierta, una chica hermosa la cual se hace llamar a si misma “diosa” apareció frente a sus ojos. “hey, tengo algo lindo para ti, ¿quieres ir a otro mundo?, solo puedes llevar una cosa de tu selección contigo”. “Entonces te llevare”, a partir de aquí, la gran aventura para subyugar al rey demonio empezará para el reencarnado Kazuma.</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(8,'Kono v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(8,'Kono v2.pdf')">tomo 2</p>
+                                <span id="price">250</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2FMahouka%20Koukou%20No%20Rettousei.jpg?alt=media&token=15faee70-551a-47e5-ade2-5ae4701c3c1f"/>
+                            <div class="info">
+                                <h4>Mahouka Ko...o Rettousei</h4>
+                                <p style="color:white;">La “magia” no es un producto de leyendas ni de cuentos de hadas. Se ha convertido en una tecnología real desde hace ya casi un siglo. La crianza en varios países del Mundo está enfrascada a la carrera de “Magos”. Shiba Tatsuya es un honorable estudiante sin habilidad mágica cursando secundaria, una secundaria mágica junto con su hermana menor, que pasa a ser la mejor entre los estudiantes de primer año. ¿Qué le pasará a Shiba? ¿Cómo vivirá su vida escolar en la cual él es uno de los muchos “reservas” que son mirados hacia abajo por los “Blooms”?</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(10,'Mahouka v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(10,'Mahouka v2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(10,'Mahouka v3.pdf')">tomo 3</p>
+                                <span id="price">150</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="https://firebasestorage.googleapis.com/v0/b/queso-8.appspot.com/o/portada%2Fkuro%20no%20hiera.jpg?alt=media&token=459e73e9-9e16-4ca0-a51c-e5787441746b"/>
+                            <div class="info">
+                                <h4>kuro no hiera</h4>
+                                <p style="color:white;">no disponible</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(9,'kuro.pdf')">tomo 1</p>
+                                <span id="price">500</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+          <!--             <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4>Mahouka Koukou No Rettousei</h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con(11,'Mahouka v1.pdf')">tomo 1</p>
+                                <p class="tag" onclick="con(11,'Mahouka v2.pdf')">tomo 2</p>
+                                <p class="tag" onclick="con(11,'Mahouka v3.pdf')">tomo 3</p>
+                                <span id="price">210</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+               <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4></h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con()">tomo 1</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4></h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con()">tomo 1</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4></h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con()">tomo 1</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4></h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con()">tomo 1</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 red s" style="margin:2%;margin-left:6%;height: 400px;">
+                        <div class="row">
+                            <img class="w"src="./Documentation/image/01.jpg"/>
+                            <div class="info">
+                                <h4></h4>
+                                <p>data</p>
+                            </div>
+                            <div class="desc">
+                                <h4>descarga</h4>
+                                <p class="tag" onclick="con()">tomo 1</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <p class="tag" onclick="con()">tomo #</p>
+                                <span id="price">100</span>
+                                <p class="idiot">X tomo</p>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                   
+               </div>
+            </div>
+        </div> 
+            
+        <!--===================    <div class="contenedor ">
+                <div class="v1">s
+                        <div class="grid img-container justify-content-center no-gutters">
+                            <a href="./Documentation/image/01.jpg" title="project name 1">
+                                <img class="w" src="./Documentation/image/01.jpg" alt="pro1" />
+                                <div class="v3">
+                                    <div class="contenedor_v3" style="">
+                                        <div><h4 >project name</h4></div>
+                                        <div>
+                                            <p>panpapapapapapapapappapapapapa
+                                            papapapa
+                                            papapapapapap<br>
+                                            aallaallallalalaalla
+                                            panpapapapapapapapappapapapapapap
+                                            pappapapapapapapapappapappapappapap
+                                            </p>
+                                        </div>
+                                             <p class="tagspan id="price" onclispan/spank="con()">tomo #harem</p>
+                                             <p class="tagspan id="price" onclispan/spank="con()">tomo #harem</p>
+                                             <p class="taid="price" onclick="con()">tomo #harem</p>
+                                             <p class="tag" id="price" onclick="con()">tomo #harem</p>
+                                             <p class="tag">harem</p>
+                                        </div>
+                                    <div class="contenedor_v2" style="">
+                                        <div>
+                                            <h4>descargas</h4>
+                                            <p class="tag">tomo</p>
+                                            <p class="tag">h</p>
+                                            <p class="tag">h</p>
+                                            <p class="tag">h</p>
+                                            <p class="tag">h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            1</div> content body end ====================-->
+        
+           
+       <!--=================== content body end ====================-->
+
+</div>
+<script src="js/longaniza.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- jquery -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<!--slick carousel -->
+<script src="assets/js/slick.min.js"></script>
+<!--Portfolio Filter-->
+<script src="assets/js/imgloaded.js"></script>
+<script src="assets/js/isotope.js"></script>
+<!-- Magnific-popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!--Counter-->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- WOW JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- Custom js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
