@@ -33,12 +33,12 @@ function connect(){
                     /*banco();*/
                     setTimeout(function(){
                         location.href="./dashboard.html";
-                    },700);
+                    },1000);
                 }
                 else{mensaje("","contrasena incorrecta","",1);}
             },1000);
         }
-    },700);
+    },1000);
 }
 function reg(){
     var name,last,id_user,pass,mapa;
@@ -57,7 +57,7 @@ function reg(){
             document.getElementById("id").value="id ya utilizado";
             document.getElementById("id").style="color:red";
         }
-    },700);
+    },1000);
     
 }   
 function sing_d(){
@@ -111,7 +111,7 @@ function con(cap,name){
         setTimeout(function(){
             dow(cap,name);
 
-        },700) ;
+        },1000) ;
     }
 }
 function procesar_compra(){
@@ -131,7 +131,7 @@ function procesar_compra(){
         else{
             mensaje("","no posee suficiente balance","",1);
         }
-    },900)
+    },1000)
 }
 function login_effet(o){
     if (o==0){
@@ -203,7 +203,7 @@ function mensaje(m_1,m_2,m_3,style){
         
         setTimeout(function(){
             noti("off");
-        },3000);
+        },5000);
     }
     
 }
