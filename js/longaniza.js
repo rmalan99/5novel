@@ -57,7 +57,7 @@ function reg(){
             document.getElementById("id").value="id ya utilizado";
             document.getElementById("id").style="color:red";
         }
-    },1000);
+    },1800);
     
 }   
 function sing_d(){
