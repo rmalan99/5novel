@@ -102,7 +102,7 @@ function con(cap,name){
             location.href="./login.html";
         },3500);
 
-        mensaje("aun no iniciado","seccion","redirecionado",2);
+        mensaje("aun no iniciado","sesion","redirecionado",2);
 
     }
     else{
