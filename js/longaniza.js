@@ -36,7 +36,7 @@ function connect(){
                     },700);
                 }
                 else{mensaje("","contrasena incorrecta","",1);}
-            },700);
+            },1000);
         }
     },700);
 }
